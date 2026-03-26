@@ -49,7 +49,7 @@ int find_max(int *arr, int n, int *index);
  */
 int add_values(int a, int b) {
   // TODO: Implement this function
-  return 0; // Replace this
+  return a +b; // Replace this
 }
 
 /**
@@ -69,6 +69,10 @@ int add_values(int a, int b) {
  */
 void swap_values(int *a, int *b) {
   // TODO: Implement this function
+  int temporary = *a;
+  *a = *b;
+  *b = temporary;
+
   // Hint: You'll need a temporary variable
 }
 
@@ -86,7 +90,15 @@ void swap_values(int *a, int *b) {
  */
 int sum_array(int *arr, int n) {
   // TODO: Implement this function
-  return 0; // Replace this
+
+
+  int sum = 0;
+  for (int x = 0; x<n ; ++x)
+  {
+    sum+= arr[x];
+  }
+
+  return sum; // Replace this
 }
 
 /**
@@ -123,9 +135,12 @@ void reverse_array(int *arr, int n) {
  * Example: average([1,2], 2) returns 1.5
  */
 double average(int *arr, int n) {
+
   // TODO: Implement this function
+  int sum   = sum_array(arr,n) ; 
+
   // Hint: Be careful with integer division!
-  return 0.0; // Replace this
+  return (double)sum /  n ; // Replace this
 }
 
 /**
@@ -149,7 +164,17 @@ double average(int *arr, int n) {
 int find_max(int *arr, int n, int *index) {
   // TODO: Implement this function
   *index = 0;
-  return 0; // Replace this
+
+  for (int x =1 ;x<n ; ++x)
+  {
+    if (arr[x] > max_value) 
+    {
+      max_value= arr[x];
+
+        *index = x;
+    }
+  }
+  return max_value; // Replace this
 }
 
 /* ============================================================
