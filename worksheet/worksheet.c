@@ -123,8 +123,8 @@ void reverse_array(int *arr, int n) {
   for (int x = 0; x <n ; ++x)
   {
     int temporary = arr[x];
-    arr[x] = arr[x-1-x]
-    arr[x-1-x] = temporary;
+    arr[x] = arr[n-1-x];
+    arr[n-1-x] = temporary;
 
   }
 }
