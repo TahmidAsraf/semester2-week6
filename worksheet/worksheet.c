@@ -120,7 +120,7 @@ int sum_array(int *arr, int n) {
 void reverse_array(int *arr, int n) {
   // TODO: Implement this function
 
-  for (int x = 0; x <n ; ++x)
+  for (int x = 0; x <n /2; ++x)
   {
     int temporary = arr[x];
     arr[x] = arr[n-1-x];
